@@ -1,0 +1,58 @@
+﻿<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="~/Images/logo.png" class="img-responsive hidden-xs" width="33%"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/">Name 1</a>
+                </li>
+                <li>
+                    <a href="/">Name 2</a>
+                </li>
+                <li>
+                    <a href="/">Name 3</a>
+                </li>
+                <li>
+                    <a href="/">Name 4</a>
+                </li>
+            </ul>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <ul class="nav navbar-nav navbar-right">
+                    @if (User.IsInRole("User"))
+                    {
+                        <li class="dropdown ">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle" title="@Navigation.Settings">
+                                <span class="glyphicon glyphicon-cog"></span> @Navigation.Settings
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="@Url.Action(MVCManager.Controller.Home.ChangeProfile, MVCManager.Controller.Home.Name)" title="@Navigation.ChangeProfile"><span class="glyphicon glyphicon-user"></span> @Navigation.ChangeProfile</a>
+                                </li>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li>
+                                        <a href="@Url.Action(MVCManager.Controller.Home.Admin, MVCManager.Controller.Home.Name)" title="@Navigation.AdminTools"><span class="glyphicon glyphicon-flash"></span> @Navigation.AdminTools</a>
+                                    </li>}
+                            </ul>
+                        </li>}
+                    <li>
+                        <a href="@Url.Action(MVCManager.Controller.Home.LogOut, MVCManager.Controller.Home.Name)" title="@Navigation.LogOut"><span class="glyphicon glyphicon-log-out"></span> @Navigation.LogOut</a>
+                    </li>
+                </ul>}
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

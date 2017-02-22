@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Manager</title>
+    @Styles.Render("~/Content/base/css")
+    @RenderSection("Styles", false)
+    @RenderSection("ScriptLoad", false)
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    @Html.Partial("_Navigation")
+    <div class="content-all">
+        <div class="container">
+            @*@RenderSection("Body")*@
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer>
+        <p>SMStudents @DateTime.Now.Year</p>
+    </footer>
+
+    @Scripts.Render("~/Scripts/base/js")
+    @RenderSection("Script", false)
+</body>
+</html>
