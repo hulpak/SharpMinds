@@ -1,4 +1,5 @@
-﻿
+﻿use [HRM.Database]
+
 INSERT INTO [hrm].[Settings]([Id],[SickDays],[VacationDays]) VALUES (1,5,20);
 
 INSERT INTO [hrm].[UserLevel]([Id],[Name]) VALUES (1,'Junior');
@@ -22,9 +23,13 @@ INSERT INTO [hrm].[OfficialHollidays]([Id],[Date],[Name]) VALUES (10,'10-14-2017
 INSERT INTO [hrm].[StatusType]([Id], [Name]) VALUES (1, 'User');
 INSERT INTO [hrm].[StatusType]([Id], [Name]) VALUES (2, 'Request');
 
-INSERT INTO [hrm].[Status]([Id],[Name], [StatusTypeId]) VALUES (1,'Vacation',		1);
-INSERT INTO [hrm].[Status]([Id],[Name], [StatusTypeId]) VALUES (2,'Sickness',		2);
-INSERT INTO [hrm].[Status]([Id],[Name], [StatusTypeId]) VALUES (3,'In processing',	1);
+
+INSERT INTO [hrm].[Status]([Id],[Name], [StatusTypeId]) VALUES (1,'Active',			1);
+INSERT INTO [hrm].[Status]([Id],[Name], [StatusTypeId]) VALUES (2,'Blocked',		1);
+INSERT INTO [hrm].[Status]([Id],[Name], [StatusTypeId]) VALUES (3,'Deleted',		1);
+INSERT INTO [hrm].[Status]([Id],[Name], [StatusTypeId]) VALUES (4,'Vacation',		2);
+INSERT INTO [hrm].[Status]([Id],[Name], [StatusTypeId]) VALUES (5,'Sickness',		2);
+INSERT INTO [hrm].[Status]([Id],[Name], [StatusTypeId]) VALUES (6,'In processing',	2);
 
 INSERT INTO [hrm].[Role]([Id],[Name]) VALUES (1,'User');
 INSERT INTO [hrm].[Role]([Id],[Name]) VALUES (2,'TeamLead');
@@ -40,11 +45,11 @@ INSERT INTO [hrm].[Team]([Id],[Name]) VALUES (6,'Portugal');
 SET IDENTITY_INSERT [hrm].[Team] OFF
 
 SET IDENTITY_INSERT [hrm].[User] ON
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[UserLevelId],[UserStatusId]) VALUES (1,'Grisha','grisha2017','grisha@mail.ru','2017-02-03',1,1 );
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[UserLevelId],[UserStatusId]) VALUES (2,'Oleg','oleg','oleg@mail.ru','2017-02-03',2,2 );
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[UserLevelId],[UserStatusId]) VALUES (3,'Andriy','andriy','andriy@mail.ru','2017-02-03',3,3 );
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[UserLevelId],[UserStatusId]) VALUES (4,'Dmytro','dmytro','dmytro@mail.ru','2017-02-03',1,1 );
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[UserLevelId],[UserStatusId]) VALUES (5,'Vasyl','vasyl','vasyl@mail.ru','2017-02-03',2,2 );
+INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (1,'Grisha','grisha2017','grisha@mail.ru','2017-02-03',1,1 );
+INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (2,'Oleg','oleg','oleg@mail.ru','2017-02-03',2,2 );
+INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (3,'Andriy','andriy','andriy@mail.ru','2017-02-03',3,3 );
+INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (4,'Dmytro','dmytro','dmytro@mail.ru','2017-02-03',1,1 );
+INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (5,'Vasyl','vasyl','vasyl@mail.ru','2017-02-03',2,2 );
 SET IDENTITY_INSERT [hrm].[User] OFF
 
 INSERT INTO [hrm].[UserTeam]([UserId],[TeamId]) VALUES (1,1);
@@ -59,7 +64,7 @@ INSERT INTO [hrm].[UserDocument]([UserId],[DocumentLink]) VALUES (1,'vk');
 INSERT INTO [hrm].[UserDocument]([UserId],[DocumentLink]) VALUES (2,'mail');
 INSERT INTO [hrm].[UserDocument]([UserId],[DocumentLink]) VALUES (1,'www');
 
-INSERT INTO [hrm].[Request]([UserId],[RequestTypeId],[StartDate],[EndDate],[StatusId]) VALUES (1,1,'2017-01-01','2017-01-02',1);
-INSERT INTO [hrm].[Request]([UserId],[RequestTypeId],[StartDate],[EndDate],[StatusId]) VALUES (2,2,'2017-02-03','2017-02-04',2);
-INSERT INTO [hrm].[Request]([UserId],[RequestTypeId],[StartDate],[EndDate],[StatusId]) VALUES (1,3,'2017-03-04','2017-03-05',3);
-INSERT INTO [hrm].[Request]([UserId],[RequestTypeId],[StartDate],[EndDate],[StatusId]) VALUES (2,1,'2017-04-05','2017-04-06',1);
+INSERT INTO [hrm].[Request]([UserId],[RequestTypeId],[StartDate],[EndDate],[StatusId]) VALUES (1,1,'2017-01-01','2017-01-02',3);
+INSERT INTO [hrm].[Request]([UserId],[RequestTypeId],[StartDate],[EndDate],[StatusId]) VALUES (2,2,'2017-02-03','2017-02-04',4);
+INSERT INTO [hrm].[Request]([UserId],[RequestTypeId],[StartDate],[EndDate],[StatusId]) VALUES (1,2,'2017-03-04','2017-03-05',3);
+INSERT INTO [hrm].[Request]([UserId],[RequestTypeId],[StartDate],[EndDate],[StatusId]) VALUES (2,1,'2017-04-05','2017-04-06',4);
