@@ -1,0 +1,32 @@
+﻿@model HRM.DAL.Models.User
+
+@{
+    ViewBag.Title = "Delete";
+}
+<br>
+<br><br>
+<br>
+<div class="container" align="center">
+    <div class="panel-footer " style="width: 250px; border:2px solid black;">
+        <h2>Delete user</h2>       
+            <div class="container" align="center">            
+                <div class="form-group">                    
+                        <div class="col-xs-13" style="width: 200px;" align="left">
+                            <label for="ex2">Name</label>
+                           @Html.EditorFor(i => i.FullName)</div>
+                    </div>
+                </div>
+               <br>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Delete" class="btn btn-default" />
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>       
+    </div>
+
+
+        
+       

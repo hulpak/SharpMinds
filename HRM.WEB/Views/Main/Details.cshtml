@@ -1,0 +1,12 @@
+﻿@model IEnumerable<HRM.DAL.Models.Team>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@foreach (var item in Model)
+{
+    <p>@item.Id</p>
+    <p>@item.Name</p>
+}
+
