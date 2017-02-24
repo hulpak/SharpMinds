@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HRM.DAL.DbContext;
+using System.Data.Entity;
 
 namespace HRM.DAL
 {
@@ -28,6 +29,9 @@ namespace HRM.DAL
                 .Where(e => e.Email == email)
                 .FirstOrDefault<User>();
         }
+
+      
+
         public IEnumerable<User> GetHR()
         {
             return db.Users.Where(c => c.Roles.Any(t => t.Id == 3));

@@ -14,7 +14,7 @@ namespace ConsoleApplication3
             var arr = off.Context.Users.ToList();
             foreach (var i in arr)
             {
-                Console.WriteLine("{0}, {1}, {2}, {3}, {4},{5},{6}  ", i.Id, i.FullName, i.Email, i.Password, i.StartDate,i.StatusId,i.Status.Id);
+                Console.WriteLine("{0}, {1}, {2}, {3}, {4},{5},{6}  ", i.Id, i.FullName, i.Email, i.Password, i.StartDate,i.StatusId,i.LevelId);
             }
             Console.ReadKey();
         }

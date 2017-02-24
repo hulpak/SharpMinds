@@ -14,6 +14,7 @@ namespace HRM.DAL.EF
             Property(t => t.Password).HasMaxLength(128).IsRequired();
             Property(t => t.Email).HasMaxLength(128).IsRequired();
             Property(t => t.StatusId).IsRequired();
+            Property(t => t.LevelId).IsRequired();
 
             HasRequired(e => e.UserLevel);//one to one - it is working
             HasRequired(e => e.Status);//many to one

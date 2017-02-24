@@ -35,22 +35,21 @@ INSERT INTO [hrm].[Role]([Id],[Name]) VALUES (1,'User');
 INSERT INTO [hrm].[Role]([Id],[Name]) VALUES (2,'TeamLead');
 INSERT INTO [hrm].[Role]([Id],[Name]) VALUES (3,'HR');
 
-SET IDENTITY_INSERT [hrm].[Team] ON
+
 INSERT INTO [hrm].[Team]([Id],[Name]) VALUES (1,'Students');
 INSERT INTO [hrm].[Team]([Id],[Name]) VALUES (2,'HRM');
 INSERT INTO [hrm].[Team]([Id],[Name]) VALUES (3,'Barcelona');
 INSERT INTO [hrm].[Team]([Id],[Name]) VALUES (4,'RealMadrid');
 INSERT INTO [hrm].[Team]([Id],[Name]) VALUES (5,'Uventus');
 INSERT INTO [hrm].[Team]([Id],[Name]) VALUES (6,'Portugal');
-SET IDENTITY_INSERT [hrm].[Team] OFF
 
-SET IDENTITY_INSERT [hrm].[User] ON
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (1,'Grisha','grisha2017','grisha@mail.ru','2017-02-03',1,1 );
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (2,'Oleg','oleg','oleg@mail.ru','2017-02-03',2,2 );
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (3,'Andriy','andriy','andriy@mail.ru','2017-02-03',3,3 );
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (4,'Dmytro','dmytro','dmytro@mail.ru','2017-02-03',1,1 );
-INSERT INTO [hrm].[User]([Id],[FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES (5,'Vasyl','vasyl','vasyl@mail.ru','2017-02-03',2,2 );
-SET IDENTITY_INSERT [hrm].[User] OFF
+
+INSERT INTO [hrm].[User]([FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES ('Grisha','grisha2017','grisha@mail.ru','2017-02-03',1,1 );
+INSERT INTO [hrm].[User]([FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES ('Oleg','oleg','oleg@mail.ru','2017-02-03',2,2 );
+INSERT INTO [hrm].[User]([FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES ('Andriy','andriy','andriy@mail.ru','2017-02-03',3,3 );
+INSERT INTO [hrm].[User]([FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES ('Dmytro','dmytro','dmytro@mail.ru','2017-02-03',1,1 );
+INSERT INTO [hrm].[User]([FullName],[Password],[Email],[StartDate],[LevelId],[StatusId]) VALUES ('Vasyl','vasyl','vasyl@mail.ru','2017-02-03',2,2 );
+
 
 INSERT INTO [hrm].[UserTeam]([UserId],[TeamId]) VALUES (1,1);
 INSERT INTO [hrm].[UserTeam]([UserId],[TeamId]) VALUES (2,2);
