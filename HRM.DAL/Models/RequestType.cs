@@ -8,7 +8,11 @@ namespace HRM.DAL.Models
 {
     public class RequestType : BaseModel
     {
-        public string Name { get; set; }     
-
+        public RequestType()
+        {
+            UserRequests = new HashSet<UserRequest>();
+        }
+        public string Name { get; set; }
+        public virtual ICollection<UserRequest> UserRequests { get; set; }
     }
 }

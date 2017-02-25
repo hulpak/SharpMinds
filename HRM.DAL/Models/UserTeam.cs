@@ -10,6 +10,9 @@ namespace HRM.DAL.Models
     {
         public int UserId { set; get; }
         public int TeamId { set; get; }
-        
+
+        public virtual User User { get; set; }
+        public virtual Team Team { get; set; }
+
     }
 }

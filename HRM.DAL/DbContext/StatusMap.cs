@@ -10,6 +10,8 @@ namespace HRM.DAL.EF
             ToTable("Status", "hrm").HasKey(t => t.Id);
             Property(t => t.Name).HasMaxLength(128).IsRequired();
             Property(e => e.StatusTypeId).IsRequired();
+            HasRequired(t => t.StatusType).WithMany(c => c.Statuses).HasForeignKey(t => t.StatusTypeId).WillCascadeOnDelete(false);
+
         }
 
     }

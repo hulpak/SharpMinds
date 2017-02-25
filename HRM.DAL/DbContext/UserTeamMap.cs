@@ -7,11 +7,8 @@ namespace HRM.DAL.EF
     {
         public UserTeamMap()
         {
-            this.ToTable("UserTeam","hrm");
-            this.HasKey(t => t.TeamId);
-            this.HasKey(t => t.UserId);
-
+            ToTable("UserTeam","hrm").HasKey(pc => new { pc.UserId,pc.TeamId}); 
         }
-  
+
     }
 }

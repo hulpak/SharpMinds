@@ -1,23 +1,28 @@
-﻿@model HRM.DAL.Models.User
+﻿
+@model HRM.DAL.Models.User
 @{
     ViewBag.Title = "Edit";
 }
 
-<div class="container" align="center">
-    <div class="panel-footer " style="width: 250px; border:2px solid blue;">
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
 
-            <div class="form-horizontal" >
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <fieldset>
+            <div class="form-horizontal">
                 <h4>Edit User</h4>
-                <div class="form-group" >
-                    @Html.LabelFor(i => i.Id)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.Id)
-
-                    </div>
-                </div>
 
                 <div class="form-group">
                     @Html.LabelFor(i => i.FullName)
@@ -26,15 +31,6 @@
 
                     </div>
                 </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(i => i.Password)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.Password)
-
-                    </div>
-                </div>
-
                 <div class="form-group">
                     @Html.LabelFor(i => i.Email)
                     <div class="col-md-10">
@@ -42,23 +38,19 @@
 
                     </div>
                 </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(i => i.StatusId)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.StatusId)
-
-                    </div>
-                </div>
-
                 <div class="form-group">
                     @Html.LabelFor(i => i.LevelId)
                     <div class="col-md-10">
                         @Html.EditorFor(i => i.LevelId)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(i => i.Password)
+                    <div class="col-md-10">
+                        @Html.EditorFor(i => i.Password)
 
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(i => i.StartDate)
                     <div class="col-md-10">
@@ -66,21 +58,37 @@
 
                     </div>
                 </div>
-
                 <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Save" class="btn btn-default" />
+                    @Html.LabelFor(i => i.StatusId)
+                    <div class="col-md-10">
+                        @Html.EditorFor(i => i.StatusId)
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(i => i.UserRole)
+                    <div class="col-md-10">
+                        @Html.EditorFor(i => i.UserRole)
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(i => i.UserTeam)
+                    <div class="col-md-10">
+                        @Html.EditorFor(i => i.UserTeam)
+
                     </div>
                 </div>
 
-            </div>
-            <div>
-                @Html.ActionLink("Back to Users List", "List")
-            </div>
-        }
+              
+                </div>
+                <p>
+                    <input type="submit" value="Save" />
+                </p>
+</fieldset>
+    }
+    <div>
+        @Html.ActionLink("Back to List", "Index")
     </div>
-
-</div>
-
-
-
+</body>
+</html>

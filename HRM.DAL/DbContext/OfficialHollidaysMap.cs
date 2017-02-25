@@ -12,6 +12,7 @@ namespace HRM.DAL.EF
         {
             ToTable("OfficialHollidays", "hrm").HasKey(t => t.Id);
             Property(t => t.Date).IsRequired();
+            Property(t => t.Name).IsRequired();
         }
     }
 }

@@ -18,7 +18,10 @@ namespace HRM.DAL.EF
             Property(t => t.StartDate).IsRequired();
             Property(t => t.EndDate).IsRequired();
             Property(t => t.StatusId).IsRequired();
-            HasRequired(e => e.RequestType);//one to one
-        }
+
+            HasRequired(t => t.User).WithMany(c => c.UserRequests).HasForeignKey(t => t.UserId).WillCascadeOnDelete(false);
+            HasRequired(t => t.RequestType).WithMany(c => c.UserRequests).HasForeignKey(t => t.RequestTypeId).WillCascadeOnDelete(false);
+            HasRequired(t => t.Status).WithMany(c => c.UserRequests).HasForeignKey(t => t.StatusId).WillCascadeOnDelete(false);
+  }
     }
 }

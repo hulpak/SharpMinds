@@ -5,8 +5,10 @@
 	[Email] NVARCHAR(128) NOT NULL,	
 	[StartDate] DATE NOT NULL,
 	[StatusId] INT NOT NULL,
-	[LevelId] INT NOT NULL	
-	CONSTRAINT [PK_UserId] PRIMARY KEY ([Id])	
-	CONSTRAINT [FK_User_Status] FOREIGN KEY ([StatusId]) REFERENCES [hrm].[Status]([Id])
+	[LevelId] INT NOT NULL,
+	[UserRole] INT NOT NULL,
+	[UserTeam] INT NOT NULL,		
+	CONSTRAINT [PK_UserId] PRIMARY KEY ([Id]),	
+	CONSTRAINT [FK_User_Status] FOREIGN KEY ([StatusId]) REFERENCES [hrm].[Status]([Id]),
 	CONSTRAINT [FK_User_Level] FOREIGN KEY ([LevelId]) REFERENCES  [hrm].[UserLevel]([Id])
 )

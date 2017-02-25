@@ -32,14 +32,14 @@ namespace HRM.DAL
 
       
 
-        public IEnumerable<User> GetHR()
-        {
-            return db.Users.Where(c => c.Roles.Any(t => t.Id == 3));
-        }
+        //public IEnumerable<User> GetHR()
+        //{
+        //    return db.Users.Where(c => c.Roles.Any(t => t.Id == 3));
+        //}
 
-        public IEnumerable<User> GetTeamLead()
-        {
-            return db.Users.Where(c => c.Roles.Any(t => t.Id == 2));
-        }
+        //public IEnumerable<User> GetTeamLead()
+        //{
+        //    return db.Users.Where(c => c.Roles.Any(t => t.Id == 2));
+        //}
     }
 }

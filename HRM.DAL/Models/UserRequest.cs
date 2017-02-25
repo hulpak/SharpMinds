@@ -14,10 +14,11 @@ namespace HRM.DAL.Models
         public int StatusId { set; get; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        
+
+       
         public virtual User User { get; set; }
-        public virtual RequestType RequestType { get; set;}
         public virtual Status Status { get; set; }
+        public virtual RequestType RequestType { get; set; }
 
 
 

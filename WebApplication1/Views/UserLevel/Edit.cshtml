@@ -1,0 +1,42 @@
+﻿@model HRM.DAL.Models.UserLevel
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <fieldset>
+            <div class="form-horizontal">
+                <h4>Edit User</h4>
+              
+                <div class="form-group">
+                    @Html.LabelFor(i => i.Name)
+                    <div class="col-md-10">
+                        @Html.EditorFor(i => i.Name)
+
+                    </div>
+                </div>
+
+            </div>
+            <p>
+                <input type="submit" value="Save" />
+            </p>
+        </fieldset>
+    }
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

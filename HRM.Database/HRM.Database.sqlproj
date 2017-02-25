@@ -87,7 +87,7 @@
     <Build Include="RequestType\Request.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="TestData\TestData.sql" />
+    <None Include="TestData\TestData.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HRM.Database.publish.xml" />

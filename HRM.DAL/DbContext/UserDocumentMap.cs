@@ -10,7 +10,8 @@ namespace HRM.DAL.EF
             ToTable("UserDocument", "hrm").HasKey(t => t.Id);
             Property(t => t.DocumentLink).HasMaxLength(128).IsRequired();
             Property(t => t.UserId).IsRequired();
-           
+            HasRequired(t => t.User).WithMany(c => c.UserDocuments).HasForeignKey(t => t.UserId).WillCascadeOnDelete(false);
+
 
         }
     }

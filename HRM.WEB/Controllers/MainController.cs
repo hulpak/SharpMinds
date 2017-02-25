@@ -16,8 +16,8 @@ namespace HRM.Web.Controllers
             return View();
         }
 
-        public ActionResult Details() {
-            return View(db.Teams);
-        }
+        //public ActionResult Details() {
+        //    return View(db.Teams);
+        //}
     }
 }

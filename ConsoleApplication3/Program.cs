@@ -10,12 +10,15 @@ namespace ConsoleApplication3
         static void Main(string[] args)
         {
             UnitOfWork off = new UnitOfWork();
-             
-            var arr = off.Context.Users.ToList();
-            foreach (var i in arr)
-            {
-                Console.WriteLine("{0}, {1}, {2}, {3}, {4},{5},{6}  ", i.Id, i.FullName, i.Email, i.Password, i.StartDate,i.StatusId,i.LevelId);
-            }
+
+            HRMContext off1 = new HRMContext();
+            OfficialHollidays o = new OfficialHollidays {
+                Id = 11,
+                Name = "Birt",
+                Date = '2017-02-02'
+            };
+            off1.OfficialHollidayses.Add(o);
+          
             Console.ReadKey();
         }
     }

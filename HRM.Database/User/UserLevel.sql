@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [hrm].[UserLevel](
-	[Id] INT  NOT NULL,
-	[Name] NVARCHAR(128) NOT NULL
+	[Id] INT  NOT NULL IDENTITY(1,1),
+	[Name] NVARCHAR(128) NOT NULL,
 	CONSTRAINT [PK_UserLevel] PRIMARY KEY ([Id])
 )

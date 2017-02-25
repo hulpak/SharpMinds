@@ -79,34 +79,6 @@
     <Compile Include="Models\UserRole.cs" />
     <Compile Include="Models\UserTeam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\BaseRepository\IRepository.cs" />
-    <Compile Include="Repository\BaseRepository\Repository.cs" />
-    <Compile Include="Repository\OfficialHollidaysRepository\IOfficialHollidaysRepository.cs" />
-    <Compile Include="Repository\OfficialHollidaysRepository\OfficialHollidaysRepository.cs" />
-    <Compile Include="Repository\RequestTypeRepository\IRequestTypeRepository.cs" />
-    <Compile Include="Repository\RequestTypeRepository\RequestTypeRepository.cs" />
-    <Compile Include="Repository\UserDocumentRepository\IUserDocumentRepository.cs" />
-    <Compile Include="Repository\UserDocumentRepository\UserDocumentRepository.cs" />
-    <Compile Include="Repository\UserLevelRepository\IUserLevelRepository.cs" />
-    <Compile Include="Repository\UserLevelRepository\UserLevelRepository.cs" />
-    <Compile Include="Repository\UserRequestRepository\IUserRequestRepository.cs" />
-    <Compile Include="Repository\UserRequestRepository\UserRequestRepository.cs" />
-    <Compile Include="Repository\RoleRepository\IRoleRepository.cs" />
-    <Compile Include="Repository\RoleRepository\RoleRepository.cs" />
-    <Compile Include="Repository\SettingsRepository\ISettingsRepository.cs" />
-    <Compile Include="Repository\SettingsRepository\SettingsRepository.cs" />
-    <Compile Include="Repository\StatusRepository\IStatusRepository.cs" />
-    <Compile Include="Repository\StatusRepository\StatusRepository.cs" />
-    <Compile Include="Repository\StatusTypeRepository\IStatusTypeRepository.cs" />
-    <Compile Include="Repository\StatusTypeRepository\StatusTypeRepository.cs" />
-    <Compile Include="Repository\TeamRepository\ITeamRepository.cs" />
-    <Compile Include="Repository\TeamRepository\TeamRepository.cs" />
-    <Compile Include="Repository\UserRepository\IUserRepository.cs" />
-    <Compile Include="Repository\UserRepository\UserRepository.cs" />
-    <Compile Include="Repository\UserRoleRepository\IUserRoleRepository.cs" />
-    <Compile Include="Repository\UserRoleRepository\UserRoleRepository.cs" />
-    <Compile Include="Repository\UserTeamRepository\IUserTeamRepository.cs" />
-    <Compile Include="Repository\UserTeamRepository\UserTeamRepository.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>

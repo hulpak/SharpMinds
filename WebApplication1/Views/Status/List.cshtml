@@ -1,0 +1,64 @@
+﻿@model IEnumerable<HRM.DAL.Models.Status>
+@{
+    ViewBag.Title = "List";
+}
+
+
+<div class="container">
+    <div class="panel-footer " style="width: 750px; border:1px solid black;">
+        <div class="row">
+            <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+                <br>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Users</h3>
+                    </div>
+                    <div class=" col-md-9 col-lg-9 ">
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Id</td>
+                                    <td>Name</td>
+                                    <td>StatusTypeId</td>
+                                </tr>
+
+                                @foreach (var i in Model)
+                                {
+                                    <tr>
+                                        <td>@i.Id</td>
+                                        <td>@i.Name</td>
+                                        <td>@i.StatusTypeId</td>
+                                        <td>
+                                            @Html.ActionLink("Delete", "Delete", new { id = i.Id })
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { i.Id })
+                                        </td>
+                                    </tr>
+                                }
+
+
+
+
+                            </tbody>
+                        </table>
+
+                        <div class="panel-footer">
+
+                            <li role="presentation" class="active">
+                                <a href="#">
+                                    @Html.ActionLink("Home", "Index", "Status")
+                                </a>
+                            </li>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

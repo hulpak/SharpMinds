@@ -23,32 +23,26 @@ namespace WebApplication1.Controllers
         public ActionResult List() {
             return View(db.Users);
         }
-     //Add  
-
+        //Add  
+        [HttpGet]
         public ActionResult Add()
         {
             return View();
         }
+
         [HttpPost]
-        public ActionResult Add(UserVM user)
+        public ActionResult Add(User user)
         {
-            User u = new HRM.DAL.Models.User();
-            u.FullName = user.FullName;
-            u.Email = u.Email;
-            u.LevelId = u.LevelId;
-            u.Password = user.Password;
-            u.StartDate = user.StartDate;
-            u.StatusId = u.StatusId;
-                db.Users.Add(u);
-                db.SaveChanges();
-                return View("List");
-            
+            db.Users.Add(user);
+            db.SaveChanges();
+            return View("Index");
         }
-//Edit
+
+        //Edit
 
         public ActionResult Edit(int id)
         {
-            User user = db.Users.Find(id);  
+            User user = db.Users.Where(i=>i.Id==id).FirstOrDefault();  
             if (user == null)
             {
                 return HttpNotFound();
@@ -61,13 +55,13 @@ namespace WebApplication1.Controllers
         {
             db.Entry(user).State = EntityState.Modified;
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return View("Index");
         }
 
         //Delete
         public ActionResult Delete(int id)
         {
-            User user = db.Users.Find(id);
+            User user = db.Users.Where(i=>i.Id==id).FirstOrDefault();
             if (user != null)
             {
                 return PartialView("Delete", user);
@@ -85,8 +79,11 @@ namespace WebApplication1.Controllers
                 db.Users.Remove(user);
                 db.SaveChanges();
             }
-            return RedirectToAction("List");
+            return View("Index");
         }
 
+        public ActionResult Page() {
+            return View();
+        }
     }
 }

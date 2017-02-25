@@ -1,12 +1,7 @@
 ﻿using HRM.DAL.DomainValue;
 using HRM.DAL.EF;
 using HRM.DAL.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace HRM.DAL.DbContext
@@ -46,31 +41,7 @@ namespace HRM.DAL.DbContext
              modelBuilder.Configurations.Add(new UserRequestMap());
              modelBuilder.Configurations.Add(new UserMap());
 
-            modelBuilder.Entity<User>().
-      HasMany(c => c.Teams).
-      WithMany(p => p.Users).
-      Map(
-       m =>
-       {
-           m.ToTable("UserTeam");
-           m.MapLeftKey("UserId");
-           m.MapRightKey("TeamId");
-          
-       });
-           
-
-            //many to many
-              modelBuilder.Entity<User>()
-             .HasMany<Role>(t => t.Roles)
-             .WithMany(u => u.Users)
-             .Map(tu =>
-             {
-                 tu.ToTable("UserRole");
-                 tu.MapLeftKey("UserId");
-                 tu.MapRightKey("RoleId");
-                 
-             });
-            
+                       
     
         }
     }

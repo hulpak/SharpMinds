@@ -13,9 +13,7 @@ namespace HRM.DAL.EF
         public RoleMap()
         {
             ToTable("Role", "hrm").HasKey(t => t.Id);
-            Property(t => t.Name).HasMaxLength(128);
-
-            
+            Property(t => t.Name).HasMaxLength(128).IsRequired();            
         }
     }
 }

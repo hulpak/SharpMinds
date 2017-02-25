@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [hrm].[Role](
-	[Id] INT  NOT NULL,
+	[Id] INT  NOT NULL IDENTITY(1,1),
 	[Name] NVARCHAR(128) NOT NULL
 	CONSTRAINT [PK_Role] PRIMARY KEY ([Id])
 )

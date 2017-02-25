@@ -125,11 +125,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HollyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RequestController.cs" />
+    <Compile Include="Controllers\RequestTypeController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\SettingController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\StatusTypeController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\UserDocumentController.cs" />
+    <Compile Include="Controllers\UserLevelController.cs" />
+    <Compile Include="Controllers\UserRoleController.cs" />
+    <Compile Include="Controllers\UserTeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\UserVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -139,6 +152,67 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Holly\Index.cshtml" />
+    <Content Include="Views\Holly\List.cshtml" />
+    <Content Include="Views\Holly\Add.cshtml" />
+    <Content Include="Views\Holly\Edit.cshtml" />
+    <Content Include="Views\Holly\Delete.cshtml" />
+    <Content Include="Views\Team\Index.cshtml" />
+    <Content Include="Views\Team\Add.cshtml" />
+    <Content Include="Views\Team\List.cshtml" />
+    <Content Include="Views\Team\Edit.cshtml" />
+    <Content Include="Views\Team\Delete.cshtml" />
+    <Content Include="Views\Role\Add.cshtml" />
+    <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\List.cshtml" />
+    <Content Include="Views\Setting\Add.cshtml" />
+    <Content Include="Views\Setting\Delete.cshtml" />
+    <Content Include="Views\Setting\Edit.cshtml" />
+    <Content Include="Views\Setting\Index.cshtml" />
+    <Content Include="Views\Setting\List.cshtml" />
+    <Content Include="Views\RequestType\Add.cshtml" />
+    <Content Include="Views\RequestType\Delete.cshtml" />
+    <Content Include="Views\RequestType\Edit.cshtml" />
+    <Content Include="Views\RequestType\Index.cshtml" />
+    <Content Include="Views\RequestType\List.cshtml" />
+    <Content Include="Views\StatusType\Add.cshtml" />
+    <Content Include="Views\StatusType\Delete.cshtml" />
+    <Content Include="Views\StatusType\Edit.cshtml" />
+    <Content Include="Views\StatusType\Index.cshtml" />
+    <Content Include="Views\StatusType\List.cshtml" />
+    <Content Include="Views\UserLevel\Add.cshtml" />
+    <Content Include="Views\UserLevel\Delete.cshtml" />
+    <Content Include="Views\UserLevel\Edit.cshtml" />
+    <Content Include="Views\UserLevel\Index.cshtml" />
+    <Content Include="Views\UserLevel\List.cshtml" />
+    <Content Include="Views\UserDocument\Add.cshtml" />
+    <Content Include="Views\UserDocument\Delete.cshtml" />
+    <Content Include="Views\UserDocument\Edit.cshtml" />
+    <Content Include="Views\UserDocument\Index.cshtml" />
+    <Content Include="Views\UserDocument\List.cshtml" />
+    <Content Include="Views\Home\Page.cshtml" />
+    <Content Include="Views\Request\Add.cshtml" />
+    <Content Include="Views\Request\Delete.cshtml" />
+    <Content Include="Views\Request\Edit.cshtml" />
+    <Content Include="Views\Request\Index.cshtml" />
+    <Content Include="Views\Request\List.cshtml" />
+    <Content Include="Views\Status\Add.cshtml" />
+    <Content Include="Views\Status\Delete.cshtml" />
+    <Content Include="Views\Status\Edit.cshtml" />
+    <Content Include="Views\Status\Index.cshtml" />
+    <Content Include="Views\Status\List.cshtml" />
+    <Content Include="Views\UserRole\Add.cshtml" />
+    <Content Include="Views\UserRole\Delete.cshtml" />
+    <Content Include="Views\UserRole\Edit.cshtml" />
+    <Content Include="Views\UserRole\Index.cshtml" />
+    <Content Include="Views\UserRole\List.cshtml" />
+    <Content Include="Views\UserTeam\Add.cshtml" />
+    <Content Include="Views\UserTeam\Delete.cshtml" />
+    <Content Include="Views\UserTeam\Edit.cshtml" />
+    <Content Include="Views\UserTeam\Index.cshtml" />
+    <Content Include="Views\UserTeam\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
