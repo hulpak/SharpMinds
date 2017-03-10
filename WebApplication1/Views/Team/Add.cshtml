@@ -4,36 +4,38 @@
 }
 
 <div class="container" align="center">
-    <div class="panel-footer " style="width: 250px; border:1px solid black;">
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
+    <h4>Add Role</h4>
+    <div class="panel-footer " style="width: 250px; border:1px solid black;color:cornflowerblue" >
+        <div class="col-xs-13" style="width: 200px;" align="left">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
 
-            <div class="form-horizontal">
-                <h4>Add Team</h4>
+                <div class="form-horizontal">
+               
 
 
-                <div class="form-group">
-                    @Html.LabelFor(i => i.Name)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.Name)
+                    <div class="form-group">
+                        @Html.LabelFor(i => i.Name)
+                        <div class="col-md-10">
+                            @Html.EditorFor(i => i.Name)
+                        </div>
                     </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Add" class="btn btn-primary"  />
+                        </div>
+                    </div>
+
                 </div>
 
-
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Add" class="btn btn-default" />
-                    </div>
-                </div>
-
+            }
+            <div>
+                @Html.ActionLink("Back to List", "Index")
             </div>
-
-        }
-        <div>
-            @Html.ActionLink("Back to List", "Index")
         </div>
-    </div>
-
+        </div>
 </div>
 

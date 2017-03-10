@@ -4,15 +4,15 @@
 }
 
 <div class="container" align="center">
-    <div class="panel-footer " style="width: 250px; border:1px solid black;">
+    <h4>Add User</h4>
+    <div class="panel-footer " style="width: 250px; border:1px solid black; color:cornflowerblue" >
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
 
             <div class="form-horizontal">
-                <h4>Add User</h4>             
-            
-                <div class="form-group">
+                            
+                <div class="form-group" >
                     @Html.LabelFor(i => i.FullName)
                     <div class="col-md-10">
                         @Html.EditorFor(i => i.FullName)
@@ -42,7 +42,7 @@
                     <div class="form-group">
                         @Html.LabelFor(i => i.StartDate)
                         <div class="col-md-10">
-                            @Html.EditorFor(i => i.StartDate)
+                            @Html.EditorFor(i => i.StartDate )
 
                         </div>
                     </div>
@@ -60,7 +60,7 @@
 
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" st>
                     @Html.LabelFor(i => i.UserTeam)
                     <div class="col-md-10">
                         @Html.EditorFor(i => i.UserTeam)
@@ -70,7 +70,7 @@
               
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Add" class="btn btn-default" />
+                        <input type="submit" value="Add" class="btn btn-primary" />
                     </div>
                 </div>
 

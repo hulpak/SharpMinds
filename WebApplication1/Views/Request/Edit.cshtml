@@ -4,62 +4,57 @@
 }
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Edit</title>
-</head>
-<body>
-    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    @using (Html.BeginForm())
-    {
-        @Html.ValidationSummary(true)
-        <fieldset>
-            <div class="form-horizontal">
-                <h4>Edit User</h4>
-              
-                <div class="form-group">
-                    @Html.LabelFor(i => i.UserId)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.UserId)
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(i => i.RequestTypeId)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.RequestTypeId)
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(i => i.StatusId)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.StatusId)
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(i => i.StartDate)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.StartDate)
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(i => i.EndDate)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.EndDate)
-                    </div>
-                </div>
+<div class="container" align="center">
+    <h4>Edit UserRequest</h4>
+    <div class="panel-footer " style="width: 250px; border:1px solid black; color:cornflowerblue">
 
-            </div>
-            <p>
-                <input type="submit" value="Save" />
-            </p>
-        </fieldset>
-    }
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <fieldset>
+                <div class="form-horizontal">
+                    
+
+                    <div class="form-group">
+                        @Html.LabelFor(i => i.UserId)
+                        <div class="col-md-10">
+                            @Html.EditorFor(i => i.UserId)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(i => i.RequestTypeId)
+                        <div class="col-md-10">
+                            @Html.EditorFor(i => i.RequestTypeId)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(i => i.StatusId)
+                        <div class="col-md-10">
+                            @Html.EditorFor(i => i.StatusId)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(i => i.StartDate)
+                        <div class="col-md-10">
+                            @Html.EditorFor(i => i.StartDate)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(i => i.EndDate)
+                        <div class="col-md-10">
+                            @Html.EditorFor(i => i.EndDate)
+                        </div>
+                    </div>
+
+                </div>
+                <p>
+                    <input type="submit" value="Save"  class="btn btn-primary" />
+                </p>
+            </fieldset>
+        }
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+      </div>
     </div>
-</body>
-</html>

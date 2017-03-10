@@ -15,7 +15,7 @@ namespace HRM.DAL.EF
             Property(t => t.Password).HasMaxLength(128).IsRequired();
             Property(t => t.Email).HasMaxLength(128).IsRequired();
             Property(t => t.StatusId).IsRequired();
-            Property(t => t.StatusId).IsRequired();
+            Property(t => t.LevelId).IsRequired();
             Property(t => t.UserRole).IsRequired();
             Property(t => t.UserTeam).IsRequired();
 

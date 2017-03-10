@@ -44,7 +44,7 @@ namespace WebApplication1.Controllers
 
         public ActionResult Edit(int id)
         {
-            UserTeam off = Db.UserTeams.Where(i => i.UserId == id).FirstOrDefault();
+            UserTeam off = Db.UserTeams.Where(i => i.TeamId == id).FirstOrDefault();
             if (off == null)
             {
                 return HttpNotFound();
@@ -63,7 +63,7 @@ namespace WebApplication1.Controllers
         //Delete
         public ActionResult Delete(int id)
         {
-            UserTeam off = Db.UserTeams.Where(i => i.UserId == id).FirstOrDefault();
+            UserTeam off = Db.UserTeams.Where(i => i.TeamId == id).FirstOrDefault();
             if (off != null)
             {
                 return PartialView("Delete", off);
@@ -74,7 +74,7 @@ namespace WebApplication1.Controllers
         [ActionName("Delete")]
         public ActionResult DeleteRecord(int id)
         {
-            UserTeam off = Db.UserTeams.Where(i => i.UserId == id).FirstOrDefault();
+            UserTeam off = Db.UserTeams.Where(i => i.TeamId == id).FirstOrDefault();
 
             if (off != null)
             {

@@ -4,43 +4,38 @@
 }
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Edit</title>
-</head>
-<body>
-    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    @using (Html.BeginForm())
-    {
-        @Html.ValidationSummary(true)
-        <fieldset>
-            <div class="form-horizontal">
-                <h4>Edit UserRole</h4>
-              
-                <div class="form-group">
-                    @Html.LabelFor(i => i.UserId)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.UserId)
+<div class="container" align="center">
+    <h4>Edit UserRole</h4>
+    <div class="panel-footer " style="width: 250px; border:1px solid black; color:cornflowerblue">
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <fieldset>
+                <div class="form-horizontal">
+                   
+
+                    <div class="form-group">
+                        @Html.LabelFor(i => i.UserId)
+                        <div class="col-md-10">
+                            @Html.EditorFor(i => i.UserId)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(i => i.RoleId)
+                        <div class="col-md-10">
+                            @Html.EditorFor(i => i.RoleId)
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(i => i.RoleId)
-                    <div class="col-md-10">
-                        @Html.EditorFor(i => i.RoleId)
-                    </div>
-                </div>
-            </div>
-            <p>
-                <input type="submit" value="Save" />
-            </p>
-        </fieldset>
-    }
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+                <p>
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </p>
+            </fieldset>
+        }
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
     </div>
-</body>
-</html>
+</div>
